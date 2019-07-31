@@ -1,0 +1,430 @@
+
+<html>
+<link rel="stylesheet" type="text/css" href="graph-style.css">
+<head>
+  <title>Papers on Big Data Meets New Hardware</title> 
+</head>
+
+<body>
+
+<div class="nav">
+<ul>
+  <h2>Topics</h2>
+
+<li><a href="#rdbm">Relational Database</a></li>
+<blockquote style="margin-left:15px; margin-top:0px; margin-bottom:0px;">
+    <li><a href="#rdbm_cpu">Multicore CPU</a></li>
+    <li><a href="#rdbm_gpu">GPUs</a></li>
+    <li><a href="#rdbm_fpga">FPGAs</a></li>
+</blockquote>
+    
+<li><a href="#graph">Graph Processing</a></li>
+<blockquote style="margin-left:15px; margin-top:0px; margin-bottom:0px;">
+    <li><a href="#graph_cpu">Multicore CPU</a></li>
+    <li><a href="#graph_gpu">GPUs</a></li>
+    <li><a href="#graph_fpga">FPGAs</a></li>
+</blockquote>
+
+<li><a href="#ml">Machine Learning</a></li>
+<blockquote style="margin-left:15px; margin-top:0px; margin-bottom:0px;">
+<!--    <li><a href="#ml_cpu">Multicore CPU</a></li>-->
+    <li><a href="#ml_gpu">GPUs</a></li>
+    <li><a href="#ml_fpga">FPGAs</a></li>
+</blockquote> 
+
+<li><a href="#stream">Stream Processing</a></li>
+<!--
+<blockquote style="margin-left:15px; margin-top:0px; margin-bottom:0px;">
+    <li><a href="#stream_cpu">Multicore CPU</a></li>
+    <li><a href="#stream_gpu">GPUs</a></li>
+    <li><a href="#stream_fpga">FPGAs</a></li>
+</blockquote> 
+-->
+    
+<!--<li><a href="#textbooks">Textbooks</a></li>-->
+<!--<li><a href="#courses">Courses</a></li>-->
+
+<li><a href="#spatial">Spatial Query Processing</a></li>   
+<li><a href="#rdma">Remote Direct Memory Access</a></li>      
+</ul>
+</div>
+
+<div class="center">
+
+<h1>Papers on Big Data Meets New Hardware</h1>
+This is a list of papers related to ''Big Data Meets New Hardware''. 
+    The papers are loosely categorized and the list is not comprehensive.
+
+
+<a name="rdbm"></a>
+<h2>Relational Database</h2>
+<a name="rdbm_cpu"></a>
+<h3>Multicore CPU</h3><br><br>
+<!--<b><u>Query Processing</u></b><br><br>-->
+<ul>   
+    <li><a href="docs/mccdb.pdf" target="_blank"> Rubao Lee, Xiaoning Ding, Feng Chen, Qingda Lu, Xiaodong Zhang. 2009. MCC-DB: Minimizing Cache Conflicts in Multi-core Processors for Databases. VLDB'09. </a> <br><br></li>  
+    <li><a href="docs/martinaVLDB12.pdf" target="_blank"> MartinaCezara
+    Albutiu Alfons Kemper Thomas Neumann. 2012. Massively Parallel SortMerge Joins in Main Memory MultiCore Database Systems. VLDB'12. </a> <br><br></li>    
+    <li><a href="docs/silo.pdf" target="_blank"> Balkesen, Cagri and Alonso, Gustavo and Teubner, Jens and \"{O}zsu, M. Tamer. 2013. Multi-core, Main-memory Joins: Sort vs. Hash Revisited. VLDB'13. </a> <br><br></li>
+    <li><a href="docs/TAO_JPDC18.pdf" target="_blank"> Xuntao Cheng and Bingsheng He and Mian Lu and Chiew Tong Lau. 2018. Many-core needs fine-grained scheduling: A case study of query processing on Intel Xeon Phi processors. VLDB'13. </a> <br><br></li>    
+<!--</ul>     -->
+<!--<b><u>Concurrency Control</u></b><br><br>-->
+<!--<ul>   -->
+    <li><a href="docs/p85-balkesen.pdf" target="_blank"> Stephen Tu, Wenting Zheng, Eddie Kohler†, Barbara Liskov, and Samuel Madden. 2017. Speedy Transactions in Multicore In-Memory Databases. SOSP'13. </a> <br><br></li>
+    <li><a href="docs/p781-wu.pdf" target="_blank"> Wu, Yingjun and Arulraj, Joy and Lin, Jiexi and Xian, Ran and Pavlo, Andrew. 2017. An empirical evaluation of in-memory multi-version concurrency control. VLDB'17. </a> <br><br></li>
+<!--</ul>    -->
+<!--<b><u>Storage & Index</u></b><br><br>-->
+<!--<ul>    -->
+    <li><a href="docs/a32-golan-gueta.pdf" target="_blank"> Golan-Gueta, Guy and Bortnikov, Edward and Hillel, Eshcar and Keidar, Idit. 2015. Scaling concurrent log-structured data stores. EuroSys'15. </a> <br><br></li>  
+    <li><a href="docs/XIEICDE17.pdf" target="_blank"> Zhongle Xie, Qingchao Cai, H. V. Jagadishy, Beng Chin Ooi and Weng-Fai Wong. 2017. Parallelizing Skip Lists for In-memory Multi-core Database Systems. ICDE'17. </a> <br><br></li>       
+<!--</ul>    -->
+<!--<b><u>Durability</u></b><br><br>-->
+<!--<ul>   -->
+    <li><a href="docs/p267-wu.pdf" target="_blank"> Wu, Yingjun and Guo, Wentian and Chan, Chee-Yong and Tan, Kian-Lee. 2017. Fast Failure Recovery for Main-Memory DBMSs on Multicores. SIGMOD'17. </a> <br><br></li>    
+    <li><a href="docs/p135-jung.pdf" target="_blank"> Hyungsoo Jung, Hyuck Han and Sooyong Kang. 2018. Scalable Database Logging for Multicores. VLDB '18. </a> <br><br></li>
+</ul>    
+
+<a name="rdbm_gpu"></a>
+<h3>GPUs</h3><br><br>
+
+    <ul>
+<li><a href="doc/db_GPU/HeVLDB2014.pdf" target="_blank"> Jiong He, Shuhao Zhang, and Bingsheng He. 2014. In-cache query co-processing on coupled CPU-GPU architectures. Proc. VLDB Endow. 8, 4 (December 2014), 329-340</a><br><br></li>
+
+<li><a href="doc/db_GPU/PaulSIGMOD2016.pdf" target="_blank">Johns Paul, Jiong He, and Bingsheng He. 2016. GPL: A GPU-based Pipelined Query Processing Engine. In Proceedings of the 2016 International Conference on Management of Data (SIGMOD '16). ACM, New York, NY, USA, 1935-1950</a><br><br></li>
+
+<li><a href="doc/db_GPU/HeSIGMOD2008.pdf" target="_blank">Bingsheng He, Ke Yang, Rui Fang, Mian Lu, Naga Govindaraju, Qiong Luo, and Pedro Sander. 2008. Relational joins on graphics processors. In Proceedings of the 2008 ACM SIGMOD international conference on Management of data (SIGMOD '08). ACM, New York, NY, USA, 511-524</a><br><br></li>
+
+<li><a href="doc/db_GPU/HeimelVLDB2013.pdf" target="_blank">Max Heimel, Michael Saecker, Holger Pirk, Stefan Manegold, and Volker Markl. 2013. Hardware-oblivious parallelism for in-memory column-stores. Proc. VLDB Endow. 6, 9 (July 2013), 709-720</a><br><br></li>
+
+<li><a href="doc/db_GPU/YuanVLDB2013.pdf" target="_blank">Yuan Yuan, Rubao Lee, and Xiaodong Zhang. 2013. The Yin and Yang of processing data warehousing queries on GPU devices. Proc. VLDB Endow. 6, 10 (August 2013), 817-828</a><br><br></li>
+
+<li><a href="doc/db_GPU/HeVLDB2013.pdf" target="_blank">Jiong He, Mian Lu, and Bingsheng He. 2013. Revisiting co-processing for hash joins on the coupled CPU-GPU architecture. Proc. VLDB Endow. 6, 10 (August 2013), 889-900</a><br><br></li>
+
+<li><a href="doc/db_GPU/WuMICRO2012.pdf" target="_blank">H. Wu, G. Diamos, S. Cadambi and S. Yalamanchili, Kernel Weaver: Automatically Fusing Database Primitives for Efficient GPU Computation. 2012. 45th Annual IEEE/ACM International Symposium on Microarchitecture, Vancouver, BC, 2012, pp. 107-118</a><br><br></li>
+
+<li><a href="doc/db_GPU/WangVLDB2014.pdf" target="_blank">Kaibo Wang, Kai Zhang, Yuan Yuan, Siyuan Ma, Rubao Lee, Xiaoning Ding, and Xiaodong Zhang. 2014. Concurrent analytical query processing with GPUs. Proc. VLDB Endow. 7, 11 (July 2014), 1011-1022.</a><br><br></li>
+
+<li><a href="doc/db_GPU/PeriklisCIDR2019.pdf" target="_blank">Chrysogelos, P., Sioulas, P., & Ailamaki, A. (2019). Hardware-conscious Query Processing in GPU-accelerated Analytical Engines. Proceesings of the 9th Biennial Conference on Innovative  Data Systems Research 2019.</a><br><br></li>
+
+<li><a href="doc/db_GPU/PirkVLDB2016.pdf" target="_blank">Holger Pirk, Oscar Moll, Matei Zaharia, and Sam Madden. 2016. Voodoo - a vector algebra for portable database performance on modern hardware. Proc. VLDB Endow. 9, 14 (October 2016), 1707-1718</a><br><br></li>
+
+<li><a href="doc/db_GPU/PeriklisVLDB2019.pdf" target="_blank">Periklis Chrysogelos, Manos Karpathiotakis, Raja Appuswamy, and Anastasia Ailamaki. 2019. HetExchange: encapsulating heterogeneous CPU-GPU parallelism in JIT compiled engines. Proc. VLDB Endow. 12, 5 (January 2019), 544-556</a><br><br></li>
+
+<li><a href="doc/db_GPU/FunkeSIGMOD2018.pdf" target="_blank">Henning Funke, Sebastian Breß, Stefan Noll, Volker Markl, and Jens Teubner. 2018. Pipelined Query Processing in Coprocessor Environments. In Proceedings of the 2018 International Conference on Management of Data (SIGMOD '18).</a><br><br></li>
+
+<li><a href="doc/db_GPU/WuCGO2014.pdf" target="_blank">Haicheng Wu, Gregory Diamos, Tim Sheard, Molham Aref, Sean Baxter, Michael Garland, and Sudhakar Yalamanchili. 2014. Red Fox: An Execution Environment for Relational Query Processing on GPUs. In Proceedings of Annual IEEE/ACM International Symposium on Code Generation and Optimization (CGO '14). ACM, New York, NY, USA, Pages 44, 11 pages.</a><br><br></li>
+
+<li><a href="doc/db_GPU/BrebVLDB2013.pdf" target="_blank">Sebastian Breß and Gunter Saake. 2013. Why it is time for a HyPE: a hybrid query processing engine for efficient GPU coprocessing in DBMS. Proc. VLDB Endow. 6, 12 (August 2013), 1398-1403. </a><br><br></li>
+
+<li><a href="doc/db_GPU/BrebSIGMOD2016.pdf" target="_blank">Sebastian Breß, Henning Funke, and Jens Teubner. 2016. Robust Query Processing in Co-Processor-accelerated Databases. In Proceedings of the 2016 International Conference on Management of Data (SIGMOD '16). ACM, New York, NY, USA, 1891-1906.</a><br><br></li>
+
+<li><a href="doc/db_GPU/BrebVLDB2017.pdf" target="_blank">Sebastian Breß, Bastian Köcher, Max Heimel, Volker Markl, Michael Saecker, and Gunter Saake. 2014. Ocelot/HyPE: optimized data processing on heterogeneous hardware. Proc. VLDB Endow. 7, 13 (August 2014), 1609-1612.</a><br><br></li>
+
+<li><a href="doc/db_GPU/KarnagelVLDB2017.pdf" target="_blank">Tomas Karnagel, Dirk Habich, and Wolfgang Lehner. 2017. Adaptive work placement for query processing on heterogeneous computing resources. Proc. VLDB Endow. 10, 7 (March 2017), 733-744.</a><br><br></li>
+
+<li><a href="doc/db_GPU/PanagiotisICDE2019.pdf" target="_blank">P. Sioulas, P. Chrysogelos, M. Karpathiotakis, R. Appuswamy and A. Ailamaki. Hardware-Conscious Hash-Joins on GPUs. 2019 IEEE 35th International Conference on Data Engineering (ICDE), Macao, Macao, 2019, pp. 698-709.</a><br><br></li>
+
+<li><a href="doc/db_GPU/PaulICDEW2019.pdf" target="_blank">J. Paul, B. He, S. Lu and C. T. Lau .Revisiting Hash Join on Graphics Processors: A Decade Later. 2019 IEEE 35th International Conference on Data Engineering Workshops (ICDEW), Macao, Macao, 2019, pp. 294-299.</a><br><br></li>
+
+<li><a href="doc/db_GPU/ZhangVLDBJ2017.pdf" target="_blank">Kai Zhang, Kaibo Wang, Yuan Yuan, Lei Guo, Rubao Li, Xiaodong Zhang, Bingsheng He, Jiayu Hu, and Bei Hua. 2017. A distributed in-memory key-value store system on heterogeneous CPU---GPU cluster. The VLDB Journal 26, 5 (October 2017), 729-750. </a><br><br></li>
+
+<li><a href="doc/db_GPU/GovindarajuSIGGRAPH2005.pdf" target="_blank">Naga K. Govindaraju, Brandon Lloyd, Wei Wang, Ming Lin, and Dinesh Manocha. 2005. Fast computation of database operations using graphics processors. In ACM SIGGRAPH 2005 Courses (SIGGRAPH '05), John Fujii (Ed.). ACM, New York, NY, USA, Article 206 . </a><br><br></li>
+
+<li><a href="doc/db_GPU/FangVLDB2010.pdf" target="_blank">Wenbin Fang, Bingsheng He, and Qiong Luo. 2010. Database compression on graphics processors. Proc. VLDB Endow. 3, 1-2 (September 2010), 670-680.</a><br><br></li>
+
+<li><a href="doc/db_GPU/MerajiSIGMOD2016.pdf" target="_blank">Sina Meraji, Berni Schiefer, Lan Pham, Lee Chu, Peter Kokosielis, Adam Storm, Wayne Young, Chang Ge, Geoffrey Ng, and Kajan Kanagaratnam. 2016. Towards a Hybrid Design for Fast Query Processing in DB2 with BLU Acceleration Using Graphical Processing Units: A Technology Demonstration. In Proceedings of the 2016 International Conference on Management of Data (SIGMOD '16). ACM, New York, NY, USA, 1951-1960.</a><br><br></li>
+</ul>   
+
+<a name="rdbm_fpga"></a>
+<h3>FPGAs</h3><br><br>
+<ul>
+   <li><a href="doc/db_FPGA/08533481.pdf" target="_blank">Philippos Papaphilippou ; Wayne Luk. Accelerating Database Systems Using FPGAs: A Survey. 2018 28th International Conference on Field Programmable Logic and Applications (FPL).</a><br><br></li>
+
+   <li><a href="doc/db_FPGA/06131822.pdf" target="_blank">Yasin Oge ; Takefumi Miyoshi ; Hideyuki Kawashima ; Tsutomu Yoshinaga. An Implementation of Handshake Join on FPGA. 2011 Second International Conference on Networking and Computing.</a><br><br></li>    
+    
+   <li><a href="doc/db_FPGA/p625-teubner.pdf" target="_blank">	Jens Teubner; Rene Mueller. How soccer players would do stream joins. SIGMOD '11.</a><br><br></li>  
+
+   <li><a href="doc/db_FPGA/a17-cong.pdf" target="_blank">	Jason Cong, Yi Zou. FPGA-Based Hardware Acceleration of Lithographic Aerial Image Simulation. TRETS '09.</a><br><br></li>  
+ 
+   <li><a href="doc/db_FPGA/07498362.pdf" target="_blank">	Rajesh R. Bordawekar ; Mohammad Sadoghi. Accelerating database workloads by software-hardware-system co-design. 2016 IEEE 32nd International Conference on Data Engineering (ICDE).</a><br><br></li>  
+
+   <li><a href="doc/db_FPGA/07544785.pdf" target="_blank">	Ren Chen ; Viktor K. Prasanna. Accelerating Equi-Join on a CPU-FPGA Heterogeneous Platform. 2016 IEEE 24th Annual International Symposium on Field-Programmable Custom Computing Machines (FCCM).</a><br><br></li>
+
+   <li><a href="doc/db_FPGA/a11-absalyamov.pdf" target="_blank">	Ildar Absalyamov, Prerna Budhkar, Skyler Windh, Robert J. Halstead, Walid A. Najjar, Vassilis J. Tsotras. FPGA-accelerated group-by aggregation using synchronizing caches. DaMoN '16.</a><br><br></li>    
+    
+   <li><a href="doc/db_FPGA/p411-sukhwani.pdf" target="_blank">	Bharat Sukhwani, Hong Min, Mathew Thoennes, Parijat Dube, Balakrishna Iyer, Bernard Brezzo, Donna Dillenberger, Sameh Asaad. Database analytics acceleration using FPGAs. PACT '12.</a><br><br></li>  
+    
+   <li><a href="doc/db_FPGA/p433-kara.pdf" target="_blank">	Kaan Kara, Jana Giceva, Gustavo Alonso. FPGA-based Data Partitioning. SIGMOD '17.</a><br><br></li> 
+    
+   <li><a href="doc/db_FPGA/CIDR15_Paper12.pdf" target="_blank">	Robert J. Halstead, Ildar Absalyamov, Walid A. Najjar and Vassilis J. Tsotras. FPGA-based Multithreading for In-Memory Hash Joins. CIDR '15.</a><br><br></li>  
+
+   <li><a href="doc/db_FPGA/07361655.pdf" target="_blank">	Oriol Arcas-Abella ; Adrià Armejach ; Timothy Hayes ; Gorker Alp Malazgirt ; Oscar Palomar ; Behzad Salami ; Nehir Sonmez. Hardware Acceleration for Query Processing: Leveraging FPGAs, CPUs, and Memory. Computing in Science & Engineering 2016.</a><br><br></li>      
+
+   <li><a href="doc/db_FPGA/p261-chung.pdf" target="_blank">	Eric S. Chung, John D. Davis, Jaewon Lee. LINQits: big data on little clients. ISCA '13.</a><br><br></li>      
+        
+   <li><a href="doc/db_FPGA/07577329.pdf" target="_blank">	Zeke Wang ; Johns Paul ; Hui Yan Cheah ; Bingsheng He ; Wei Zhang. Relational query processing on OpenCL-based FPGAs. FPL '16.</a><br><br></li> 
+
+   <li><a href="doc/db_FPGA/p1659-sidler.pdf" target="_blank">	David Sidler, Zsolt Istvan, Muhsen Owaida, Kaan Kara, Gustavo Alonso. doppioDB: A Hardware Accelerated Database. SIGMOD '17.</a><br><br></li> 
+    
+   <li><a href="doc/db_FPGA/p348-kara.pdf" target="_blank">	Kaan Kara, Ken Eguro, Ce Zhang, Gustavo Alonso. ColumnML Column-Store Machine Learning with On-The-Fly Data Transformation. VLDB '18.</a><br><br></li> 
+     
+   <li><a href="doc/db_FPGA/07966689.pdf" target="_blank">	Muhsen Owaida ; David Sidler ; Kaan Kara ; Gustavo Alonso. Centaur- A Framework for Hybrid CPU-FPGA Databases. 2017 IEEE 25th Annual International Symposium on Field-Programmable Custom Computing Machines (FCCM).</a><br><br></li> 
+       
+    <li><a href="doc/db_FPGA/DaMon2016.pdf" target="_blank">	Absalyamov, Ildar and Budhkar, Prerna and Windh, Skyler and Halstead, Robert J. and Najjar, Walid A. and Tsotras, Vassilis J.  FPGA-accelerated group-by aggregation using synchronizing caches. DaMoN '16.</a><br><br></li> 
+    
+    <li><li><a href="doc/db_FPGA/mqReteICDE12-Multi-Query_Stream_Processing_on.pdf" target="_blank">	Mohammad Sadoghi, Rija Javed, Naif Tarafdar, Harsh Singh, Rohan Palaniappan, Hans-Arno Jacobsen.  Multi-Query Stream Processing on FPGAs. ICDE'12.</a><br><br></li> 
+    
+    <li><a href="doc/db_FPGA/4699a045.pdf" target="_blank">	Christopher Dennl, Daniel Ziener, Ju ̈rgen Teich.   On-the-fly Composition of FPGA-Based SQL Query Accelerators Using a Partially Reconfigurable Module Library.  2012 IEEE 20th International Symposium on Field-Programmable Custom Computing Machines.</a><br><br></li> 
+  
+</ul>
+
+
+<a name="gpu"></a>
+<h2>Graph Processing</h2>    
+<a name="graph_cpu"></a>
+<h3>Multicore CPUs</h3><br><br>   
+<ul>
+<li><a href="docs/cpu-graph/ShunPPoPP2013.pdf" target="_blank">Julian Shun and Guy E. Blelloch. Ligra: A Lightweight Graph Processing Framework for Shared Memory. PPoPP 2013.</a><br><br></li>
+<li><a href="docs/cpu-graph/ThenVLDB2014.pdf" target="_blank">Then, Manuel, et al. "The more the merrier: Efficient multi-source graph traversal." VLDB 2014.</a><br><br></li>
+<li><a href="docs/cpu-graph/ZhangOOPSLA2018.pdf" target="_blank">Zhang, Yunming, et al. "Graphit: A high-performance graph dsl." OOPSLA 2018.</a><br><br></li>
+<li><a href="docs/cpu-graph/NguyenSOSP13.pdf" target="_blank">Nguyen, Donald, Andrew Lenharth, and Keshav Pingali. "A lightweight infrastructure for graph analytics." SOSP 2013.</a><br><br></li>
+<li><a href="docs/cpu-graph/LowARXIV2013.pdf" target="_blank">Low, Yucheng, et al. "Graphlab: A new framework for parallel machine learning." arXiv 2014.</a><br><br></li>
+<li><a href="docs/cpu-graph/SundaramVLDB2015.pdf" target="_blank">Sundaram, Narayanan, et al. "Graphmat: High performance graph analytics made productive." VLDB 2015.</a><br><br></li>
+<li><a href="docs/cpu-graph/PengPACT2018.pdf" target="_blank">Peng, Zhen, et al. "Graphphi: efficient parallel graph processing on emerging throughput-oriented architectures." PACT 2018.</a><br><br></li>
+<li><a href="docs/cpu-graph/ZhangATC2018.pdf" target="_blank">Zhang, Yu, et al. "CGraph: A correlations-aware approach for efficient concurrent iterative graph processing." USENIX ATC 2018.</a><br><br></li>
+<li><a href="docs/cpu-graph/MalicevicATC2017.pdf" target="_blank">Malicevic, Jasmina, Baptiste Lepers, and Willy Zwaenepoel. "Everything you always wanted to know about multicore graph processing but were afraid to ask." USENIX ATC 2017.</a><br><br></li>
+<li><a href="docs/cpu-graph/BalajiHPDC2019.pdf" target="_blank">Balaji, Vignesh, and Brandon Lucia. "Combining Data Duplication and Graph Reordering to Accelerate Parallel Graph Processing." HPDC 2019</a><br><br></li>
+<li><a href="docs/cpu-graph/WeiSIGMOD2016.pdf" target="_blank">Wei, Hao, et al. "Speedup graph processing by graph ordering." SIGMOD 2016.</a><br><br></li>
+<li><a href="docs/cpu-graph/BeamerIISWC2015.pdf" target="_blank">Beamer, Scott, Krste Asanovic, and David Patterson. "Locality exists in graph processing: Workload characterization on an ivy bridge server." IISWC 2015.</a><br><br></li>
+<li><a href="docs/cpu-graph/EisenmanICPE2016.pdf" target="_blank">Eisenman, Assaf, et al. "Parallel graph processing: Prejudice and state of the art." ICPE 2016.</a><br><br></li>
+<li><a href="docs/cpu-graph/ZhangPPoPP2015.pdf" target="_blank">Zhang, Kaiyuan, Rong Chen, and Haibo Chen. "NUMA-aware graph-structured analytics." PPoPP 2015.</a><br><br></li>
+<li><a href="docs/cpu-graph/PanTPDS2019.pdf" target="_blank">Pan, Peitian, Chao Li, and Minyi Guo. "CongraPlus: Towards Efficient Processing of Concurrent Graph Queries on NUMA Machines." TPDS 2019.</a><br><br></li>
+<li><a href="docs/cpu-graph/ShangICDE2019.pdf" target="_blank">Shang, Zechao, Jeffrey Xu Yu, and Zhiwei Zhang. "TuFast: A Lightweight Parallelization Library for Graph Analytics." ICDE 2019.</a><br><br></li>
+<li><a href="docs/cpu-graph/XuASPLOS2019.pdf" target="_blank">Xu, Chengshuo, Keval Vora, and Rajiv Gupta. "PnP: Pruning and Prediction for Point-To-Point Iterative Graph Analytics." ASPLOS2019.</a><br><br></li>
+<li><a href="docs/cpu-graph/ChenTOPC2019.pdf" target="_blank">Chen, Rong, et al. "Powerlyra: Differentiated graph computation and partitioning on skewed graphs." TOPC 2019</a><br><br></li>
+<li><a href="docs/cpu-graph/FanVLDB2019.pdf" target="_blank">Fan, Wenfei, et al. "Dynamic scaling for parallel graph computations." VLDB 2019</a><br><br></li>
+<li><a href="docs/cpu-graph/GillVLDB2018.pdf" target="_blank">Gill, Gurbinder, et al. "A study of partitioning policies for graph analytics on large-scale distributed platforms." VLDB 2018.</a><br><br></li>
+<li><a href="docs/cpu-graph/LinSC2018.pdf" target="_blank">Lin, Heng, et al. "ShenTu: processing multi-trillion edge graphs on millions of cores in seconds." SC 2018.</a><br><br></li>
+<li><a href="docs/cpu-graph/JoWWW2019.pdf" target="_blank">Jo, Yong-Yeon, et al. "RealGraph: a graph engine leveraging the power-law distribution of real-world graphs." WWW 2019.</a><br><br></li>
+<li><a href="docs/cpu-graph/VoraATC2019.pdf" target="_blank">Vora, Keval. "LUMOS: Dependency-Driven Disk-based Graph Processing." USENIX ATC 2019.</a><br><br></li>   
+</ul>
+<a name="graph_gpu"></a>
+<h3>GPUs</h3><br><br>    
+<ul>
+<li><a href="docs/gpu-graph/ShiCSUR2018.pdf" target="_blank">Shi, Xuanhua, et al. "Graph processing on GPUs: A survey." ACM Computing Surveys (CSUR) 2018.</a><br><br></li>
+<li><a href="docs/gpu-graph/MaATC2017.pdf" target="_blank">Ma, Lingxiao, et al. "Garaph: Efficient gpu-accelerated graph processing on a single machine with balanced replication." USENIX ATC 2017.</a><br><br></li>
+<li><a href="docs/gpu-graph/JiaVLDB2017.pdf" target="_blank">Jia, Zhihao, et al. "A distributed multi-GPU system for fast graph processing." VLDB 2017.</a><br><br></li>
+<li><a href="docs/gpu-graph/SabetASPLOS2018.pdf" target="_blank">Nodehi Sabet, Amir Hossein, Junqiao Qiu, and Zhijia Zhao. "Tigr: Transforming irregular graphs for gpu-friendly graph processing." ASPLOS 2018.</a><br><br></li>
+<li><a href="docs/gpu-graph/WangPPoPP2016.pdf" target="_blank">Wang, Yangzihao, et al. "Gunrock: A high-performance graph processing library on the GPU." PPoPP 2016.</a><br><br></li>
+<li><a href="docs/gpu-graph/ZhongTPDS2013.pdf" target="_blank">Zhong, Jianlong, and Bingsheng He. "Medusa: Simplified graph processing on GPUs." TPDS 2013.</a><br><br></li>
+<li><a href="docs/gpu-graph/KhorasaniHPDC2014.pdf" target="_blank">Khorasani, Farzad, et al. "CuSha: vertex-centric graph processing on GPUs." HPDC 2014.</a><br><br></li>
+<li><a href="docs/gpu-graph/DavidsonIPDPS2014.pdf" target="_blank">Davidson, Andrew, et al. "Work-efficient parallel GPU methods for single-source shortest paths." IPDPS 2014.</a><br><br></li>
+<li><a href="docs/gpu-graph/LinTKDE2016.pdf" target="_blank">Lin, Wenqing, et al. "Network motif discovery: A GPU approach." TKDE 2016.</a><br><br></li>
+<li><a href="docs/gpu-graph/WangATC2018.pdf" target="_blank">Wang, Siyuan, et al. "Fast and Concurrent {RDF} Queries using RDMA-assisted {GPU} Graph Exploration." USENIX ATC 2018.</a><br><br></li>
+<li><a href="docs/gpu-graph/MengPPoPP2019.pdf" target="_blank">Meng, Ke, et al. "A pattern based algorithmic autotuner for graph processing on GPUs." PPoPP 2019.</a><br><br></li>
+<li><a href="docs/gpu-graph/ZhangASPLOS2019.pdf" target="_blank">Zhang, Yu, et al. "DiGraph: An efficient path-based iterative directed graph processing system on multiple GPUs." ASPLOS 2019.</a><br><br></li>
+<li><li><a href="docs/gpu-graph/ShaSIGMOD2019.pdf" target="_blank">Sha, Mo, Yuchen Li, and Kian-Lee Tan. "GPU-based Graph Traversal on Compressed Graphs." SIGMOD 2019.</a><br><br></li>
+<li><a href="docs/gpu-graph/ShiTKDE2017.pdf" target="_blank">Shi, Xuanhua, et al. "Frog: Asynchronous graph processing on GPU with hybrid coloring model." TKDE 2017</a><br><br></li>
+<li><a href="docs/gpu-graph/HanPACT2017.pdf" target="_blank">Han, Wei, et al. "Graphie: Large-scale asynchronous graph traversals on just a gpu." PACT 2017.</a><br><br></li>
+<li><a href="docs/gpu-graph/NaiSC2015.pdf" target="_blank">Nai, Lifeng, et al. "GraphBIG: understanding graph computing in the context of industrial solutions." SC 2015.</a><br><br></li>
+<li><a href="docs/gpu-graph/HangSIGMOD2016.pdf" target="_blank">Liu, Hang, H. Howie Huang, and Yang Hu. "ibfs: Concurrent breadth-first search on gpus." SIGMOD 2016.</a><br><br></li>
+<li><a href="docs/gpu-graph/PanIPDPS2018.pdf" target="_blank">Yuechao Pan, Roger Pearce, and John D. Owens. "Scalable Breadth-First Search on a GPU Cluster." IPDPS 2018.</a><br><br></li>
+<li><a href="docs/gpu-graph/GuoVLDB2017.pdf" target="_blank">Guo, Wentian, et al. "Parallel personalized pagerank on dynamic graphs." VLDB 2017.</a><br><br></li>
+<li><a href="docs/gpu-graph/ShaVLDB2017.pdf" target="_blank">Sha, Mo, et al. "Accelerating dynamic graph analytics on gpus." VLDB 2018.</a><br><br></li>
+<li><a href="docs/gpu-graph/GreenHiPEC2016.pdf" target="_blank">Green, Oded, and David A. Bader. "cuSTINGER: Supporting dynamic graph algorithms for GPUs." HPEC 2016.</a><br><br></li>
+
+</ul>
+
+<a name="graph_fpga"></a>
+<h3>FPGAs</h3><br><br>
+<ul>
+<li><a href="docs/graph-fpga/p105-dai.pdf" target="_blank">Guohao Dai, Yuze Chi, Yu Wang, Huazhong Yang. "FPGP: Graph Processing Framework on FPGA, A Case Study of Breadth-First Search." FPGA 2016.</a><br><br></li>    
+    
+<li><li><a href="docs/graph-fpga/p217-dai.pdf" target="_blank">Guohao Dai, Tianhao Huang, Yuze Chi, Ningyi Xu, Yu Wang, Huazhong Yang. "ForeGraph: Exploring Large-scale Graph Processing on Multi-FPGA Architecture." FPGA 2017.</a><br><br></li>
+
+<li><a href="docs/graph-fpga/06861577.pdf" target="_blank">Eriko Nurvitadhi ; Gabriel Weisz ; Yu Wang ; Skand Hurkat ; Marie Nguyen ; James C. Hoe ; José F. Martínez ; Carlos Guestrin. "GraphGen: An FPGA Framework for Vertex-Centric Graph Computation." 2014 IEEE 22nd Annual International Symposium on Field-Programmable Custom Computing Machines.</a><br><br></li>    
+<li><a href="docs/graph-fpga/07544758.pdf" target="_blank">Shijie Zhou, Charalampos Chelmis, Viktor K. Prasanna. "High-throughput and Energy-efficient Graph Processing on FPGA." 2016 IEEE 24th Annual International Symposium on Field-Programmable Custom Computing Machines (FCCM).</a><br><br></li>
+
+<li><a href="docs/graph-fpga/08102188.pdf" target="_blank">Shijie Zhou, Viktor K. Prasanna. "Accelerating Graph Analytics on
+CPU-FPGA Heterogeneous Platform." 2017 29th International Symposium on Computer Architecture and High Performance Computing (SBAC-PAD).</a><br><br></li>
+
+<li><a href="docs/graph-fpga/07551391.pdf" target="_blank">Muhammet Mustafa Ozdal ; Serif Yesil ; Taemin Kim ; Andrey Ayupov ; John Greth ; Steven Burns ; Ozcan Ozturk. "Energy Efficient Architecture for Graph Analytics Accelerators." 2016 ACM/IEEE 43rd Annual International Symposium on Computer Architecture (ISCA).</a><br><br></li>
+
+<li><a href="docs/graph-fpga/p111-oguntebi.pdf" target="_blank">Tayo Oguntebi, Kunle Olukotun. "GraphOps: A Dataflow Library for Graph Analytics Acceleration." FPGA’16.</a><br><br></li> 
+
+<li><li><a href="docs/graph-fpga/07284059.pdf" target="_blank">lunwhan Ahn, Sungpack Hong, Sungjoo Yoo, Onur Mutlu, Kiyoung Choi. "A Scalable Processing-in-Memory Accelerator for Parallel Graph Processing." ISCA'15.</a><br><br></li> 
+
+<li><a href="docs/graph-fpga/07783759.pdf" target="_blank">Tae Jun Ham, Lisa Wu, Narayanan Sundaram, Nadathur Satish, Margaret Martonosi. "Graphicionado: A high-performance and energy-efficient accelerator for graph analytics." 2016 49th Annual IEEE/ACM International Symposium on Microarchitecture (MICRO).</a><br><br></li> 
+      
+<li><a href="docs/graph-fpga/p1706-lee.pdf" target="_blank">Jinho Lee, Heesu Kim, Sungjoo Yoo, Kiyoung Choi,
+H. Peter Hofstee, Gi-Joon Nam, Mark R. Nutter, and Damir Jamsek. "ExtraV: Boosting Graph Processing Near Storage with a Coherent Accelerator." 2017 VLDB Endowment.</a><br><br></li>   
+    
+<li><li><a href="docs/graph-fpga/a8-yao.pdf" target="_blank">Pengcheng Yao, Long Zheng, Xiaofei Liao, Hai Jin, Bingsheng He. "An Efficient Graph Accelerator with Parallel Data Conflict Management." PACT ’18.</a><br><br></li>   
+
+<li><a href="docs/graph-fpga/08342150.pdf" target="_blank">Tianhao Huang, Guohao Dai, Yu Wang, Huazhong Yang. "HyVE: Hybrid Vertex-Edge Memory Hierarchy for Energy-Efficient Graph Processing." DATE'18.</a><br><br></li>   
+
+<li><a href="docs/graph-fpga/p69-zhou.pdf" target="_blank">Shijie Zhou, Rajgopal Kannan, Hanqing Zeng, Viktor K. Prasanna. "An FPGA Framework for Edge-Centric Graph Processing." CF '18: Proceedings of the 15th ACM International Conference on Computing Frontiers.</a><br><br></li>   
+        
+<li><a href="docs/graph-fpga/p229-zhang.pdf" target="_blank">Jialiang Zhang, Jing Li. "Degree-aware Hybrid Graph Traversal on FPGA-HMC Platform." FPGA '18.</a><br><br></li>  
+    
+<li><a href="docs/graph-fpga/a8-yao.pdf" target="_blank">Xuanhua Shi, Zhigao Zheng, Yongluan Zhou, Hai Jin, Ligang He, Bo Liu, Qiang-Sheng Hua. "Graph Processing on GPUs: A Survey." CSUR '18.</a><br><br></li>  
+ 
+<li><a href="docs/graph-fpga/p207-zhang.pdf" target="_blank">Jialiang Zhang, Soroosh Khoram, Jing Li. "Boosting the Performance of FPGA-based Graph Processor using Hybrid Memory Cube: A Case for Breadth First Search." FPGA '17.</a><br><br></li>  
+    
+<li><a href="docs/graph-fpga/p320-shao.pdf" target="_blank">Zhiyuan Shao, Ruoshi Li, Diqing Hu, Xiaofei Liao, Hai Jin. "Improving Performance of Graph Processing on FPGA-DRAM Platform by Two-level Vertex Caching." FPGA '19.</a><br><br></li> 
+    
+</ul>      
+    
+<a name="ml"></a>
+<h2>Machine Learning</h2>    
+<a name="ml_gpu"></a>
+<h3>GPUs</h3><br><br>
+<ul>
+<li><a href="docs/ml-gpu/wen_tpds19_gpugbdt.pdf" target="_blank">Wen, Z., Shi, J., He, B., Chen, J., Ramamohanarao, K. and Li, Q., 2019. Exploiting GPUs for Efficient Gradient Boosting Decision Tree Training. IEEE Transactions on Parallel and Distributed Systems.</a><br><br></li>
+<li><a href="docs/ml-gpu/wen_jmlr18-thundersvm.pdf" target="_blank">Wen, Z., Shi, J., Li, Q., He, B. and Chen, J., 2018. ThunderSVM: A fast SVM library on GPUs and CPUs. The Journal of Machine Learning Research, 19(1), pp.797-801.</a><br><br></li>
+<li><a href="docs/ml-gpu/object-detection-gpu.pdf" target="_blank">Coates, Adam, Paul Baumstarck, Quoc Le, and Andrew Y. Ng. "Scalable learning for object detection with GPU hardware." International Conference on Intelligent Robots and Systems, pp. 4287-4293. IEEE, 2009.</a><br><br></li>
+<li><a href="docs/ml-gpu/tensorflow-osdi16.pdf" target="_blank">Abadi, M., Barham, P., Chen, J., Chen, Z., Davis, A., Dean, J., Devin, M., Ghemawat, S., Irving, G., Isard, M. and Kudlur, M., 2016. Tensorflow: A system for large-scale machine learning. OSDI, pp. 265-283, 2016.</a><br><br></li>
+<li><a href="docs/ml-gpu/GPUMLib.pdf" target="_blank">Lopes, N. and Ribeiro, B.. GPUMLib: An efficient open-source GPU machine learning library. International Journal of Computer Information Systems and Industrial Management Applications, 3, pp.355-362, 2011.</a><br><br></li>
+<li><a href="docs/ml-gpu/survey-jpdc.pdf" target="_blank">Upadhyaya, S.R.. Parallel approaches to machine learning—A comprehensive survey. JPDC, 73(3), pp.284-292, 2013.</a><br><br></li>
+<li><a href="docs/ml-gpu/icml09-UDL-GPU.pdf" target="_blank">Raina, R., Madhavan, A. and Ng, A.Y., 2009. Large-scale deep unsupervised learning using graphics processors. ICML (pp. 873-880). ACM.</a><br><br></li>
+<li><a href="docs/ml-gpu/coates-dl-gpu-icml13.pdf" target="_blank">Coates, A., Huval, B., Wang, T., Wu, D., Catanzaro, B. and Andrew, N., 2013. Deep learning with COTS HPC systems. ICML (pp. 1337-1345).</a><br><br></li>
+<li><a href="docs/ml-gpu/performance-gpu-ml.pdf" target="_blank">Strigl, D., Kofler, K. and Podlipnig, S., 2010, February. Performance and scalability of GPU-based convolutional neural networks. In 2010 18th Euromicro Conference on Parallel, Distributed and Network-based Processing (pp. 317-324). IEEE.</a><br><br></li>
+<li><a href="docs/ml-gpu/gpusvm-2008.pdf" target="_blank">Catanzaro, B., Sundaram, N. and Keutzer, K., 2008, July. Fast support vector machine training and classification on graphics processors. ICML (pp. 104-111). ACM.</a><br><br></li>
+<li><a href="docs/ml-gpu/practical-knn-gpu.pdf" target="_blank">Kuang, Q. and Zhao, L., 2009. A practical GPU based kNN algorithm. International Symposium on Computer Science and Computational Technology (ISCSCI 2009) (p. 151).</a><br><br></li>
+<li><a href="docs/ml-gpu/mniha-drl-icml16.pdf" target="_blank">Mnih, V., Badia, A.P., Mirza, M., Graves, A., Lillicrap, T., Harley, T., Silver, D. and Kavukcuoglu, K., 2016, June. Asynchronous methods for deep reinforcement learning. ICML (pp. 1928-1937).</a><br><br></li>
+<li><a href="docs/ml-gpu/big-data-gpu.pdf" target="_blank">Chen, C., Li, K., Ouyang, A., Tang, Z. and Li, K., 2017. GPU-accelerated parallel hierarchical extreme learning machine on flink for big data. IEEE Transactions on Systems, Man, and Cybernetics: Systems, 47(10), pp.2740-2753.</a><br><br></li>
+<li><a href="docs/ml-gpu/gpu-for-ml-05.pdf" target="_blank">Steinkraus, Dave, Ian Buck, and P. Y. Simard. "Using GPUs for machine learning algorithms." Eighth International Conference on Document Analysis and Recognition (ICDAR'05). IEEE, 2005.</a><br><br></li>
+<li><a href="docs/ml-gpu/random-forest-on-gpu.pdf" target="_blank">Sharp, T., 2008, October. Implementing decision trees and forests on a GPU. In European conference on computer vision(pp. 595-608). Springer, Berlin, Heidelberg.</a><br><br></li>
+<li><a href="docs/ml-gpu/ps-gpus-16.pdf" target="_blank">Cui, H., Zhang, H., Ganger, G.R., Gibbons, P.B. and Xing, E.P., 2016, April. Geeps: Scalable deep learning on distributed gpus with a gpu-specialized parameter server. In Proceedings of the Eleventh European Conference on Computer Systems(p. 4). ACM.
+</a><br><br></li>
+<li><li><a href="docs/ml-gpu/elm-ensumble.pdf" target="_blank">Van Heeswijk, M., Miche, Y., Oja, E. and Lendasse, A., 2011. GPU-accelerated and parallelized ELM ensembles for large-scale regression. Neurocomputing, 74(16), pp.2430-2437.
+</a><br><br></li>
+<li><a href="docs/ml-gpu/atc17-zhang-dlgpu.pdf" target="_blank">Zhang, H., Zheng, Z., Xu, S., Dai, W., Ho, Q., Liang, X., Hu, Z., Wei, J., Xie, P. and Xing, E.P., 2017. Poseidon: An efficient communication architecture for distributed deep learning on GPU clusters. In 2017 {USENIX} Annual Technical Conference ({USENIX}{ATC} 17) (pp. 181-193).</a><br><br></li>
+<li><a href="docs/ml-gpu/gpu-time-series.pdf" target="_blank">Coelho, I.M., Coelho, V.N., Luz, E.J.D.S., Ochi, L.S., Guimarães, F.G. and Rios, E., 2017. A GPU deep learning metaheuristic based model for time series forecasting. Applied Energy, 201, pp.412-418.</a><br><br></li>
+</ul>
+    
+<li><a name="ml_fpga"></a>
+<h3>FPGAs</h3><br><br>
+<ul>
+<li><a href="docs/ml-fpga/decision-tree-gpu-fpga-cpu.pdf" target="_blank">Van Essen, B., Macaraeg, C., Gokhale, M. and Prenger, R., 2012. Accelerating a random forest classifier: Multi-core, GP-GPU, or FPGA?. In 2012 IEEE 20th International Symposium on Field-Programmable Custom Computing Machines (pp. 232-239). IEEE.</a><br><br></li>
+<li><a href="docs/ml-fpga/fpl16-accelerating-rnn.pdf" target="_blank">Nurvitadhi, E., Sim, J., Sheffield, D., Mishra, A., Krishnan, S. and Marr, D., 2016. Accelerating recurrent neural networks in analytics servers: Comparison of FPGA, CPU, GPU, and ASIC. In 2016 26th International Conference on Field Programmable Logic and Applications (FPL) (pp. 1-4). IEEE.</a><br><br></li>
+<li><a href="docs/ml-fpga/p574-wang-vldb19.pdf" target="_blank">Wang, Z., Kara, K., Zhang, H., Alonso, G., Mutlu, O. and Zhang, C., 2019. Accelerating generalized linear models with MLWeaving: a one-size-fits-all system for any-precision learning. Proceedings of the VLDB Endowment, 12(7), pp.807-821.</a><br><br></li>
+<li><li><a href="docs/ml-fpga/kernel-svm-fpga.pdf" target="_blank">Bauer, S., Köhler, S., Doll, K. and Brunsmann, U., 2010. FPGA-GPU architecture for kernel SVM pedestrian detection. In 2010 IEEE Computer Society Conference on Computer Vision and Pattern Recognition-Workshops (pp. 61-68). IEEE.</a><br><br></li>
+<li><a href="docs/ml-fpga/DLAU-2016.pdf" target="_blank">Wang, C., Gong, L., Yu, Q., Li, X., Xie, Y. and Zhou, X., 2016. DLAU: A scalable deep learning accelerator unit on FPGA. IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems, 36(3), pp.513-517.</a><br><br></li>
+<li><li><a href="docs/ml-fpga/fpga-dcnn-zhang15.pdf" target="_blank">Zhang, C., Li, P., Sun, G., Guan, Y., Xiao, B. and Cong, J., 2015. Optimizing FPGA-based accelerator design for deep convolutional neural networks. In Proceedings of the 2015 ACM/SIGDA International Symposium on Field-Programmable Gate Arrays (pp. 161-170). ACM.</a><br><br></li>
+<li><a href="docs/ml-fpga/limited-precision-gupta15.pdf" target="_blank">Gupta, S., Agrawal, A., Gopalakrishnan, K. and Narayanan, P., 2015, June. Deep learning with limited numerical precision. In International Conference on Machine Learning (pp. 1737-1746).</a><br><br></li>
+<li><a href="docs/ml-fpga/dl-fpga.pdf" target="_blank">Yu, Q., Wang, C., Ma, X., Li, X. and Zhou, X., 2015, May. A deep learning prediction process accelerator based FPGA. In 2015 15th IEEE/ACM International Symposium on Cluster, Cloud and Grid Computing (pp. 1159-1162). IEEE.</a><br><br></li>
+<li><a href="docs/ml-fpga/layer-dl-2017.pdf" target="_blank">Ortega-Zamorano, F., Jerez, J.M., Gómez, I. and Franco, L., 2017. Layer multiplexing FPGA implementation for deep back-propagation learning. Integrated Computer-Aided Engineering, 24(2), pp.171-185.</a><br><br></li>
+<li><a href="docs/ml-fpga/svm-fpga.pdf" target="_blank">Irick, K., DeBole, M., Narayanan, V. and Gayasen, A., 2008. A hardware efficient support vector machine architecture for FPGA. In 2008 16th International Symposium on Field-Programmable Custom Computing Machines (pp. 304-305). IEEE.</a><br><br></li>
+<li><a href="docs/ml-fpga/boltzmann-fpga-09.pdf" target="_blank">Kim, S.K., McAfee, L.C., McMahon, P.L. and Olukotun, K., 2009. A highly scalable restricted boltzmann machine FPGA implementation. In 2009 International Conference on Field Programmable Logic and Applications (pp. 367-372). IEEE.</a><br><br></li>
+<li><a href="docs/ml-fpga/fpga-linear-machine-learning_fccm17.pdf" target="_blank">Kara, K., Alistarh, D., Alonso, G., Mutlu, O. and Zhang, C., 2017. FPGA-accelerated dense linear machine learning: A precision-convergence trade-off. In 2017 IEEE 25th Annual International Symposium on Field-Programmable Custom Computing Machines (FCCM) (pp. 160-167). IEEE.</a><br><br></li>
+<li><a href="docs/ml-fpga/fpga-cnn-09.pdf" target="_blank">Farabet, C., Poulet, C., Han, J.Y. and LeCun, Y., 2009. Cnp: An fpga-based processor for convolutional networks. In 2009 International Conference on Field Programmable Logic and Applications (pp. 32-37). IEEE.</a><br><br></li>
+<li><a href="docs/ml-fpga/deep-burning.pdf" target="_blank">Wang, Y., Xu, J., Han, Y., Li, H. and Li, X., 2016, June. DeepBurning: automatic generation of FPGA-based learning accelerators for the neural network family. In Proceedings of the 53rd Annual Design Automation Conference (p. 110). ACM.</a><br><br></li>
+<li><a href="docs/ml-fpga/svm-fpga-03.pdf" target="_blank">Anguita, D., Boni, A. and Ridella, S., 2003. A digital architecture for support vector machines: theory, algorithm, and FPGA implementation. IEEE Transactions on neural networks, 14(5), pp.993-1009.</a><br><br></li>
+<li><a href="docs/ml-fpga/intime_fpga2015.pdf" target="_blank">Kapre, N., Ng, H., Teo, K. and Naude, J., 2015. Intime: A machine learning approach for efficient selection of fpga cad tool parameters. In Proceedings of the 2015 ACM/SIGDA International Symposium on Field-Programmable Gate Arrays (pp. 23-26). ACM.</a><br><br></li>
+<li><a href="docs/ml-fpga/boltzmann-2015.pdf" target="_blank">Li, B., Najafi, M.H. and Lilja, D.J., 2015, July. An FPGA implementation of a restricted boltzmann machine classifier using stochastic bit streams. In 2015 IEEE 26th International Conference on Application-specific Systems, Architectures and Processors (ASAP) (pp. 68-69). IEEE.</a><br><br></li>
+
+<li><a href="docs/ml-fpga/traffic-classification-17.pdf" target="_blank">Tong, D., Qu, Y.R. and Prasanna, V.K., 2017. Accelerating decision tree based traffic classification on FPGA and multicore platforms. IEEE Transactions on Parallel and Distributed Systems, 28(11), pp.3046-3059.</a><br><br></li>
+<li><a href="docs/ml-fpga/scalable-inference-fpga.pdf" target="_blank">Owaida, M., Zhang, H., Zhang, C. and Alonso, G., 2017. Scalable inference of decision tree ensembles: Flexible design for CPU-FPGA platforms. In 2017 27th International Conference on Field Programmable Logic and Applications (FPL) (pp. 1-8). IEEE.</a><br><br></li>
+<li><a href="docs/ml-fpga/PLINK.pdf" target="_blank">Wienbrandt, L., Kässens, J.C., Hübenthal, M. and Ellinghaus, D., 2019. 1000× faster than PLINK: Combined FPGA and GPU accelerators for logistic regression-based detection of epistasis. Journal of computational science, 30, pp.183-193.</a><br><br></li>
+<li><a href="docs/ml-fpga/spark-fpga.pdf" target="_blank">Koromilas, E., Stamelos, I., Kachris, C. and Soudris, D., 2017, May. Spark acceleration on FPGAs: A use case on machine learning in Pynq. In 2017 6th International Conference on Modern Circuits and Systems Technologies (MOCAST) (pp. 1-4). IEEE.</a><br><br></li>    
+    
+</ul>    
+    
+<a name="stream"></a>
+<h2>Stream Processing</h2>    
+<!--<a name="#stream_cpu"></a>-->
+<!--<h3>Multicore CPUs</h3><br><br>-->
+<ul>
+    <li><a href="docs/Orchestrating08.pdf" target="_blank"> Kudlur, Manjunath and Mahlke, Scott. 2008. Orchestrating the Execution of Stream Programs on Multicore Platforms. PLDI '08. </a> <br><br></li>
+    <li><a href="docs/p57-carpenter.pdf" target="_blank"> Carpenter, Paul M. and Ramirez, Alex and Ayguade, Eduard. 2009. Mapping stream programs onto heterogeneous multiprocessor systems. CASES '09. </a> <br><br></li>        
+    <li><a href="docs/Orchestrating11.pdf" target="_blank"> Farhad, Sardar M. and Ko, Yousun and Burgstaller, Bernd and Scholz, Bernhard. 2011. Orchestration by Approximation: Mapping Stream Programs Onto Multicore Architectures. ASPLOS '11. </a> <br><br></li>    
+    <li><a href="docs/ISVLSI_FINAL.pdf" target="_blank"> Karim Kanouny, Martino Ruggieroy, David Atienzay, and Mihaela van der Schaar. 2014. Low Power and Scalable Many-Core Architecture for Big-Data Stream Computing. ISVLSI '14. </a> <br><br></li>     
+    <li><a href="docs/trill-vldb2015.pdf" target="_blank"> Badrish Chandramouli, Jonathan Goldstein, Mike Barnett, Robert DeLine, Danyel Fisher, John C. Platt, James F. Terwilliger, John Wernsing, 2015. Trill: A High-Performance Incremental Query Processor for Diverse Analytics. VLDB'15. </a> <br><br></li>     
+    <li><a href="docs/Pohl17.pdf" target="_blank"> Constantin Pohl, Philipp G¨ otze, and KaiUwe
+    Sattler 2017. A Cost Model for Data Stream Processing on Modern Hardware. ADMS'17. </a> <br><br></li>     
+    <li><a href="docs/ZhangICDE17.pdf" target="_blank"> Shuhao Zhang , Bingsheng He , Daniel Dahlmeier , Amelie Chi Zhou and Thomas Heinze, 2017. Revisiting the Design of Data Stream Processing Systems on Multi-Core Processors. ICDE'17. </a> <br><br></li> 
+    <li><a href="docs/atc17-miao.pdf" target="_blank"> Miao, Hongyu and Park, Heejin and Jeon, Myeongjae and Pekhimenko, Gennady and McKinley, Kathryn S. and Lin, Felix Xiaozhu, 2017. StreamBox: Modern Stream Processing on a Multicore Machine. USENIX ATC '17. </a> <br><br></li> 
+    
+    <li><a href="docs/p705-zhang.pdf" target="_blank"> Zhang, Shuhao and He, Jiong and Zhou, Amelie Chi and He, Bingsheng, 2019. BriskStream: Scaling Data Stream Processing on Shared-Memory Multicore Architectures. SIGMOD'19. </a> <br><br></li>   
+    <li><a href="docs/p516-zeuch.pdf" target="_blank"> Zeuch, Steffen and Monte, Bonaventura Del and Karimov, Jeyhun and Lutz, Clemens and Renz, Manuel and Traub, Jonas and Bre\ss, Sebastian and Rabl, Tilmann and Markl, Volker, 2019. Analyzing efficient stream processing on modern hardware. VLDB'19. </a> <br><br></li>     
+ </ul>   
+
+<a name="spatial"></a>
+<h2>Spatial Query Processing</h2>      
+<ul>
+<li><a href="docs/Spatial_GPU/YouBigSpatial2013.pdf" target="_blank">Simin You, Jianting Zhang, and Le Gruenwald. 2013. Parallel spatial query processing on GPUs using R-trees. In Proceedings of the 2nd ACM SIGSPATIAL International Workshop on Analytics for Big Geospatial Data (BigSpatial '13). ACM, New York, NY, USA, 23-31. </a><br><br></li>
+
+<li><a href="docs/Spatial_GPU/ZhangSIGSPATIAL2015.pdf" target="_blank">Jianting Zhang, Simin You, and Le Gruenwald. 2015. Large-scale spatial data processing on GPUs and GPU-accelerated clusters. SIGSPATIAL Special 6, 3 (April 2015), 27-34.</a><br><br></li>
+
+<li><a href="docs/Spatial_GPU/AjiBigSpatial2014.pdf" target="_blank">Ablimit Aji, George Teodoro, and Fusheng Wang. 2014. Haggis: turbocharge a MapReduce based spatial data warehousing system with GPU engine. In Proceedings of the 3rd ACM SIGSPATIAL International Workshop on Analytics for Big Geospatial Data (BigSpatial '14), Varun Chandola and Ranga Raju Vatsavai (Eds.). ACM, New York, NY, USA, 15-20.</a><br><br></li>
+
+<li><a href="docs/Spatial_GPU/SimionICCS2012.pdf" target="_blank">Bogdan Simion, Suprio Ray, Angela Demke Brown. Speeding up Spatial Database Query Execution using GPUs, Procedia Computer Science, Volume 9, 2012, Pages 1870-1879,</a><br><br></li>
+
+<li><a href="docs/Spatial_GPU/SiminBigSpatial2016.pdf" target="_blank">Simin You, Jianting Zhang, and Le Gruenwald. 2016. High-performance polyline intersection based spatial join on GPU-accelerated clusters. In Proceedings of the 5th ACM SIGSPATIAL International Workshop on Analytics for Big Geospatial Data (BigSpatial '16), Varun Chandola and Ranga Raju Vatsavai (Eds.). ACM, New York, NY, USA, 42-49</a><br><br></li>
+
+<li><a href="docs/Spatial_GPU/AghajarianSIGSPATIAL2016.pdf" target="_blank">Danial Aghajarian, Satish Puri, and Sushil Prasad. 2016. GCMF: an efficient end-to-end spatial join system over large polygonal datasets on GPGPU platform. In Proceedings of the 24th ACM SIGSPATIAL International Conference on Advances in Geographic Information Systems (SIGSPACIAL '16). ACM, New York, NY, USA, Article 18, 10 pages.</a><br><br></li>
+
+<li><a href="docs/Spatial_GPU/ZacharatouVLDB2017.pdf" target="_blank">Eleni Tzirita Zacharatou, Harish Doraiswamy, Anastasia Ailamaki, Cláudio T. Silva, and Juliana Freiref. 2017. GPU rasterization for real-time spatial aggregation over arbitrary polygons. Proc. VLDB Endow. 11, 3 (November 2017), 352-365.</a><br><br></li>
+
+<li><a href="docs/Spatial_GPU/AghajarianSIGSPATIAL2017.pdf" target="_blank">Danial Aghajarian and Sushil K. Prasad. 2017. A Spatial Join Algorithm Based on a Non-uniform Grid Technique over GPGPU. In Proceedings of the 25th ACM SIGSPATIAL International Conference on Advances in Geographic Information Systems (SIGSPATIAL '17), Erik Hoel, Shawn Newsam, Siva Ravada, Roberto Tamassia, and Goce Trajcevski (Eds.). ACM, New York, NY, USA, Article 56, 4 pages.</a><br><br></li>
+
+<li><a href="docs/Spatial_GPU/ZhangBigSpatial2015.pdf" target="_blank">Jianting Zhang, Simin You, and Le Gruenwald. 2015. Efficient Parallel Zonal Statistics on Large-Scale Global Biodiversity Data on GPUs. In Proceedings of the 4th International ACM SIGSPATIAL Workshop on Analytics for Big Geospatial Data (BigSpatial'15), Varun Chandola and Ranga Raju Vatsavai (Eds.). ACM, New York, NY, USA, 35-44.</a><br><br></li>
+
+<li><a href="docs/Spatial_GPU/ZhangDOLAP2012.pdf" target="_blank">Jianting Zhang, Simin You, and Le Gruenwald. 2012. High-performance online spatial and temporal aggregations on multi-core CPUs and many-core GPUs. In Proceedings of the fifteenth international workshop on Data warehousing and OLAP (DOLAP '12). ACM, New York, NY, USA, 89-96.</a><br><br></li>
+
+<li><a href="docs/Spatial_GPU/PrasadSIGSPATIAL2015.pdf" target="_blank">Sushil K. Prasad, Michael McDermott, Satish Puri, Dhara Shah, Danial Aghajarian, Shashi Shekhar, and Xun Zhou. 2015. A vision for GPU-accelerated parallel computation on geo-spatial datasets. SIGSPATIAL Special 6, 3 (April 2015), 19-26.</a><br><br></li>
+
+<li><a href="docs/Spatial_GPU/ZhangBigSpatial2012.pdf" target="_blank">Jianting Zhang and Simin You. 2012. Speeding up large-scale point-in-polygon test based spatial join on GPUs. In Proceedings of the 1st ACM SIGSPATIAL International Workshop on Analytics for Big Geospatial Data (BigSpatial '12). ACM, New York, NY, USA, 23-32. </a><br><br></li>
+
+<li><a href="docs/Spatial_GPU/ParsadSIGSPATIAL2013.pdf" target="_blank">Sushil K. Prasad, Shashi Shekhar, Michael McDermott, Xun Zhou, Michael Evans, and Satish Puri. 2013. GPGPU-accelerated interesting interval discovery and other computations on GeoSpatial datasets: a summary of results. In Proceedings of the 2nd ACM SIGSPATIAL International Workshop on Analytics for Big Geospatial Data (BigSpatial '13). ACM, New York, NY, USA, 65-72.</a><br><br></li>
+
+<li><a href="docs/Spatial_GPU/docs/Spatial_GPU/HouTVCG2011.pdf" target="_blank">Q. Hou, X. Sun, K. Zhou, C. Lauterbach and D. Manocha, "Memory-Scalable GPU Spatial Hierarchy Construction," in IEEE Transactions on Visualization and Computer Graphics, vol. 17, no. 4, pp. 466-474, April 2011.</a><br><br></li>
+
+<li><a href="docs/Spatial_GPU/NouriSSDBM2018.pdf" target="_blank">Zhila Nouri and Yi-Cheng Tu. 2018. GPU-based parallel indexing for concurrent spatial query processing. In Proceedings of the 30th International Conference on Scientific and Statistical Database Management (SSDBM '18). ACM, New York, NY, USA, Article 23, 12 pages.</a><br><br></li>
+
+<li><a href="docs/Spatial_GPU/RealCoRR2018.pdf" target="_blank">Lucas Correia Villa Real and Bruno Silva. Full Speed Ahead: 3D Spatial Database Acceleration with GPUs. 2018 abs/1808.09571 CoRR</a><br><br></li>
+
+<li><a href="docs/Spatial_GPU/DoraiswamyICDE2016.pdf" target="_blank">H. Doraiswamy, H. T. Vo, C. T. Silva and J. Freire, "A GPU-based index to support interactive spatio-temporal queries over historical data," 2016 IEEE 32nd International Conference on Data Engineering (ICDE), Helsinki, 2016, pp. 1086-1097.</a><br><br></li>
+
+<li><a href="docs/Spatial_GPU/ChavanSIGMOD2017.pdf" target="_blank">Harshada Chavan and Mohamed F. Mokbel. 2017. Scout: A GPU-Aware System for Interactive Spatio-temporal Data Visualization. In Proceedings of the 2017 ACM International Conference on Management of Data (SIGMOD '17). ACM, New York, NY, USA, 1691-1694.</a><br><br></li>   
+
+    
+</ul>     
+
+<a name="rdma"></a>
+<h2>Remote Direct Memory Access</h2>      
+<ul>
+<li><a href="docs/RMDA/atc18-wang-siyuan.pdf" target="_blank">Wang S, Lou C, Chen R, et al. Fast and Concurrent {RDF} Queries using RDMA-assisted {GPU} Graph Exploration. USENIX ATC 2018.</a><br><br></li>
+<li><a href="docs/RMDA/eurosys19-xue-jilong.pdf" target="_blank">Xue J, Miao Y, Chen C, et al. Fast Distributed Deep Learning over RDMA. EuroSys 2019.</a><br><br></li>
+<li><a href="docs/RMDA/sigcomm16-guo-chuanxiong.pdf" target="_blank">Guo C, Wu H, Deng Z, et al. RDMA over commodity ethernet at scale. SIGCOMM 2016.</a><br><br></li>
+<li><a href="docs/RMDA/eurosys16-chen-yanzhe.pdf" target="_blank">Chen Y, Wei X, Shi J, et al. Fast and general distributed transactions using RDMA and HTM. EuroSys 2016.</a><br><br></li>
+<li><a href="docs/RMDA/ijpp-liu-jiuxing.pdf" target="_blank">Liu J, Wu J, Panda D K. High performance RDMA-based MPI implementation over InfiniBand. IJPP 2004.</a><br><br></li>
+<li><a href="docs/RMDA/atc13-mitchell.pdf" target="_blank">Mitchell C, Geng Y, Li J. Using One-Sided {RDMA} Reads to Build a Fast, CPU-Efﬁcient Key-Value Store. USENIX ATC 2013.</a><br><br></li>
+<li><a href="docs/RMDA/atc16-kalia.pdf" target="_blank">Kalia A, Kaminsky M, Andersen D G. Design Guidelines for High Performance {RDMA} Systems. USENIX ATC 2016.</a><br><br></li>
+<li><a href="docs/RMDA/US10331613.pdf" target="_blank">Brown P, Yang F, Boyer A. Methods for enabling direct memory access (DMA) capable devices for remote DMA (RDMA) usage and devices therof. U.S. Patent Application 2019.</a><br><br></li>
+<li><a href="docs/RMDA/US9747249.pdf" target="_blank">Cherian S, Ingale T, Venkata R S N. Methods and systems to achieve multi-tenancy in RDMA over converged Ethernet. U.S. Patent 2017.</a><br><br></li>
+<li><a href="docs/RMDA/US9727523.pdf" target="_blank">Aslam M S, Langridge S, Salo T. Remote direct memory access (RDMA) optimized high availability for in-memory data storage. U.S. Patent Application 2019.</a><br><br></li>
+<li><a href="docs/RMDA/cgo19-nelson-jacob.pdf" target="_blank">Nelson J, Palmieri R. Understanding RDMA behavior in NUMA systems. CGO 2019.</a><br><br></li>
+<li><a href="docs/RMDA/ijpp18-jia-chengfan.pdf" target="_blank">Jia C, Liu J, Jin X, et al. Improving the performance of distributed tensorflow with RDMA. IJPP 2018.</a><br><br></li>
+<li><a href="docs/RMDA/tpds18-chu-ching-hsiang.pdf" target="_blank">Chu C H, Lu X, Awan A A, et al. Exploiting Hardware Multicast and GPUDirect RDMA for Efficient Broadcast. TPDS 2018.</a><br><br></li>
+<li><a href="docs/RMDA/icmd19-ziegler.pdf" target="_blank">Ziegler T, Tumkur Vani S, Binnig C, et al. Designing Distributed Tree-based Index Structures for Fast RDMA-capable Networks. ICMD 2019.</a><br><br></li>
+<li><a href="docs/RMDA/sysml18-tootoonchian.pdf" target="_blank">Tootoonchian A, Panda A, Nematzadeh A, et al. Distributed shared memory for machine learning. SysML 2018</a><br><br></li>
+<li><a href="docs/RMDA/ijpp19-li-mingfan.pdf" target="_blank">Li M, Wen K, Lin H, et al. Improving the Performance of Distributed MXNet with RDMA. IJPP 2019.</a><br><br></li>
+<li><a href="docs/RMDA/eurosys17-liu-feilong.pdf" target="_blank">Liu F, Yin L, Blanas S. Design and evaluation of an rdma-aware data shuffling operator for parallel database systems. EuroSys 2017.</a><br><br></li>
+<li><a href="docs/RMDA/icmd16-li-feng.pdf" target="_blank">Li F, Das S, Syamala M, et al. Accelerating relational databases by leveraging remote memory and rdma. ICMD 2016</a><br><br></li>
+<li><a href="docs/RMDA/osdi18-wei-xingda.pdf" target="_blank">Wei X, Dong Z, Chen R, et al. Deconstructing RDMA-enabled Distributed Transactions: Hybrid is Better! OSDI  2018</a><br><br></li>
+<li><a href="icde19-geng-j.pdf" target="_blank">Geng J, Li D, Wang S. Rima: An RDMA-Accelerated Model-Parallelized Solution to Large-Scale Matrix Factorization. ICDE 2019.</a><br><br></li>
+    
+</ul>    
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-47506002-3', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</html>
